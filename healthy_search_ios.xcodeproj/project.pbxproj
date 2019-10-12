@@ -3,24 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2305C9309C7814EA274A4507 /* Pods_healthy_search_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16C1F600348D32DB178917C /* Pods_healthy_search_ios.framework */; };
+		8E7FE92C23521D530021DC90 /* RestaurantCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7FE92B23521D530021DC90 /* RestaurantCard.swift */; };
 		8EBDC9F02351E56F0060F74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDC9EF2351E56F0060F74D /* AppDelegate.swift */; };
-		8EBDC9F22351E56F0060F74D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDC9F12351E56F0060F74D /* ViewController.swift */; };
-		8EBDC9F52351E56F0060F74D /* gloze7145.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBDC9F32351E56F0060F74D /* gloze7145.storyboard */; };
+		8EBDC9F22351E56F0060F74D /* SelectRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDC9F12351E56F0060F74D /* SelectRestaurantViewController.swift */; };
+		8EBDC9F52351E56F0060F74D /* SelectRestaurantViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBDC9F32351E56F0060F74D /* SelectRestaurantViewController.storyboard */; };
 		8EBDC9F72351E5720060F74D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EBDC9F62351E5720060F74D /* Assets.xcassets */; };
 		8EBDC9FA2351E5720060F74D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBDC9F82351E5720060F74D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A0B26A9E281E5AFDCFFEBFE /* Pods-healthy_search_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-healthy_search_ios.debug.xcconfig"; path = "Target Support Files/Pods-healthy_search_ios/Pods-healthy_search_ios.debug.xcconfig"; sourceTree = "<group>"; };
+		8E7FE92B23521D530021DC90 /* RestaurantCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCard.swift; sourceTree = "<group>"; };
 		8EBDC9EC2351E56F0060F74D /* healthy_search_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthy_search_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBDC9EF2351E56F0060F74D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EBDC9F12351E56F0060F74D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8EBDC9F42351E56F0060F74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/gloze7145.storyboard; sourceTree = "<group>"; };
+		8EBDC9F12351E56F0060F74D /* SelectRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRestaurantViewController.swift; sourceTree = "<group>"; };
+		8EBDC9F42351E56F0060F74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelectRestaurantViewController.storyboard; sourceTree = "<group>"; };
 		8EBDC9F62351E5720060F74D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EBDC9F92351E5720060F74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EBDC9FB2351E5720060F74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +42,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E7FE92923521C330021DC90 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8EBDC9F32351E56F0060F74D /* SelectRestaurantViewController.storyboard */,
+				8EBDC9F12351E56F0060F74D /* SelectRestaurantViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8E7FE92A23521C550021DC90 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E7FE92B23521D530021DC90 /* RestaurantCard.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8EBDC9E32351E56F0060F74D = {
 			isa = PBXGroup;
 			children = (
@@ -61,9 +80,9 @@
 		8EBDC9EE2351E56F0060F74D /* healthy_search_ios */ = {
 			isa = PBXGroup;
 			children = (
+				8E7FE92923521C330021DC90 /* ViewController */,
+				8E7FE92A23521C550021DC90 /* View */,
 				8EBDC9EF2351E56F0060F74D /* AppDelegate.swift */,
-				8EBDC9F12351E56F0060F74D /* ViewController.swift */,
-				8EBDC9F32351E56F0060F74D /* gloze7145.storyboard */,
 				8EBDC9F62351E5720060F74D /* Assets.xcassets */,
 				8EBDC9F82351E5720060F74D /* LaunchScreen.storyboard */,
 				8EBDC9FB2351E5720060F74D /* Info.plist */,
@@ -77,7 +96,6 @@
 				4A0B26A9E281E5AFDCFFEBFE /* Pods-healthy_search_ios.debug.xcconfig */,
 				B1D2E42C334D7FE68A6CDDC9 /* Pods-healthy_search_ios.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,7 +169,7 @@
 			files = (
 				8EBDC9FA2351E5720060F74D /* LaunchScreen.storyboard in Resources */,
 				8EBDC9F72351E5720060F74D /* Assets.xcassets in Resources */,
-				8EBDC9F52351E56F0060F74D /* gloze7145.storyboard in Resources */,
+				8EBDC9F52351E56F0060F74D /* SelectRestaurantViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EBDC9F22351E56F0060F74D /* ViewController.swift in Sources */,
+				8E7FE92C23521D530021DC90 /* RestaurantCard.swift in Sources */,
+				8EBDC9F22351E56F0060F74D /* SelectRestaurantViewController.swift in Sources */,
 				8EBDC9F02351E56F0060F74D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,12 +231,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8EBDC9F32351E56F0060F74D /* gloze7145.storyboard */ = {
+		8EBDC9F32351E56F0060F74D /* SelectRestaurantViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8EBDC9F42351E56F0060F74D /* Base */,
 			);
-			name = gloze7145.storyboard;
+			name = SelectRestaurantViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		8EBDC9F82351E5720060F74D /* LaunchScreen.storyboard */ = {
