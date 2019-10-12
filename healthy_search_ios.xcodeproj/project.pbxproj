@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2305C9309C7814EA274A4507 /* Pods_healthy_search_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16C1F600348D32DB178917C /* Pods_healthy_search_ios.framework */; };
 		8EBDC9F02351E56F0060F74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDC9EF2351E56F0060F74D /* AppDelegate.swift */; };
 		8EBDC9F22351E56F0060F74D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDC9F12351E56F0060F74D /* ViewController.swift */; };
 		8EBDC9F52351E56F0060F74D /* gloze7145.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBDC9F32351E56F0060F74D /* gloze7145.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A0B26A9E281E5AFDCFFEBFE /* Pods-healthy_search_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-healthy_search_ios.debug.xcconfig"; path = "Target Support Files/Pods-healthy_search_ios/Pods-healthy_search_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		8EBDC9EC2351E56F0060F74D /* healthy_search_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthy_search_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBDC9EF2351E56F0060F74D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EBDC9F12351E56F0060F74D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		8EBDC9F62351E5720060F74D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EBDC9F92351E5720060F74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EBDC9FB2351E5720060F74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1D2E42C334D7FE68A6CDDC9 /* Pods-healthy_search_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-healthy_search_ios.release.xcconfig"; path = "Target Support Files/Pods-healthy_search_ios/Pods-healthy_search_ios.release.xcconfig"; sourceTree = "<group>"; };
+		F16C1F600348D32DB178917C /* Pods_healthy_search_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_healthy_search_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2305C9309C7814EA274A4507 /* Pods_healthy_search_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				8EBDC9EE2351E56F0060F74D /* healthy_search_ios */,
 				8EBDC9ED2351E56F0060F74D /* Products */,
+				B3795E299903FB6AD1F3F53E /* Pods */,
+				FDFD9D92DB5EB401EDBEC34A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = healthy_search_ios;
 			sourceTree = "<group>";
 		};
+		B3795E299903FB6AD1F3F53E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A0B26A9E281E5AFDCFFEBFE /* Pods-healthy_search_ios.debug.xcconfig */,
+				B1D2E42C334D7FE68A6CDDC9 /* Pods-healthy_search_ios.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FDFD9D92DB5EB401EDBEC34A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F16C1F600348D32DB178917C /* Pods_healthy_search_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EBDC9FE2351E5720060F74D /* Build configuration list for PBXNativeTarget "healthy_search_ios" */;
 			buildPhases = (
+				B1FE42822E58187F35E729A9 /* [CP] Check Pods Manifest.lock */,
 				8EBDC9E82351E56F0060F74D /* Sources */,
 				8EBDC9E92351E56F0060F74D /* Frameworks */,
 				8EBDC9EA2351E56F0060F74D /* Resources */,
+				E03ED48ACF18634CB9E02B3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B1FE42822E58187F35E729A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-healthy_search_ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E03ED48ACF18634CB9E02B3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-healthy_search_ios/Pods-healthy_search_ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-healthy_search_ios/Pods-healthy_search_ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-healthy_search_ios/Pods-healthy_search_ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8EBDC9E82351E56F0060F74D /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		8EBDC9FF2351E5720060F74D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A0B26A9E281E5AFDCFFEBFE /* Pods-healthy_search_ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +368,7 @@
 		};
 		8EBDCA002351E5720060F74D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D2E42C334D7FE68A6CDDC9 /* Pods-healthy_search_ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
