@@ -40,7 +40,7 @@ extension SelectRestaurantViewController: KolodaViewDelegate {
 
 extension SelectRestaurantViewController: KolodaViewDataSource {
     func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
-        return images.count
+        return 1//images.count
     }
     
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
@@ -48,10 +48,10 @@ extension SelectRestaurantViewController: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIImageView(image: images[index])
+        return UIImageView(image: UIImage(named:"Image")!)//images[index])
     }
     
-    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-        return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)[0] as? OverlayView
-    }
+//    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
+//        return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)[0] as? OverlayView
+//    }
 }
