@@ -21,53 +21,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tua-xC-HBx" customClass="KolodaView" customModule="Koloda">
                                 <rect key="frame" x="16" y="74" width="382" height="758"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="VGP-A4-gP8">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="379.5"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A16 TOKYO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmN-fI-k8b">
-                                        <rect key="frame" x="0.0" y="395.5" width="382" height="33"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="イタリアン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLg-ck-C3b">
-                                        <rect key="frame" x="0.0" y="436.5" width="382" height="20"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京都千代田区丸の内2-6-1 丸の内ブリックスクエア 1F" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcs-kG-3SU">
-                                        <rect key="frame" x="0.0" y="464.5" width="382" height="19.5"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4K-ff-pxW">
-                                        <rect key="frame" x="0.0" y="496" width="382" height="143.5"/>
-                                        <string key="text">本店「Ａ１６」の南イタリアをベースとした、地元食材を上手く活かす料理は全米で高い評価を得ています。 本店同様、東京・丸の内店では窯焼きピッツァやグリル料理をダイナミックに提供し、 カジュアルなスタイルで旬にこだわったメニューを楽しんでいただけます。 丸の内ブリックスクエア１Ｆ広場に面したロケーションも大きな魅力です。</string>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カップル成立です！！末長くお幸せに！！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QG-mG-M2k">
+                                        <rect key="frame" x="16" y="253" width="350" height="66"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="VGP-A4-gP8" secondAttribute="trailing" id="DoC-98-rug"/>
-                                    <constraint firstItem="Tcs-kG-3SU" firstAttribute="leading" secondItem="tua-xC-HBx" secondAttribute="leading" id="F9d-4U-8d1"/>
-                                    <constraint firstItem="EmN-fI-k8b" firstAttribute="top" secondItem="VGP-A4-gP8" secondAttribute="bottom" constant="16" id="I15-Tl-xlk"/>
-                                    <constraint firstAttribute="trailing" secondItem="J4K-ff-pxW" secondAttribute="trailing" id="Lyz-aq-nBw"/>
-                                    <constraint firstItem="J4K-ff-pxW" firstAttribute="top" secondItem="Tcs-kG-3SU" secondAttribute="bottom" constant="12" id="MnJ-V7-Yzg"/>
-                                    <constraint firstItem="Tcs-kG-3SU" firstAttribute="top" secondItem="NLg-ck-C3b" secondAttribute="bottom" constant="8" id="OKA-7R-xyG"/>
-                                    <constraint firstAttribute="trailing" secondItem="EmN-fI-k8b" secondAttribute="trailing" id="SVR-YQ-hYr"/>
-                                    <constraint firstAttribute="trailing" secondItem="NLg-ck-C3b" secondAttribute="trailing" id="UV6-Fh-Psx"/>
-                                    <constraint firstItem="NLg-ck-C3b" firstAttribute="top" secondItem="EmN-fI-k8b" secondAttribute="bottom" constant="8" id="YZj-jn-El8"/>
-                                    <constraint firstItem="VGP-A4-gP8" firstAttribute="top" secondItem="tua-xC-HBx" secondAttribute="top" id="ZCh-f1-nwa"/>
-                                    <constraint firstItem="VGP-A4-gP8" firstAttribute="leading" secondItem="tua-xC-HBx" secondAttribute="leading" id="ePE-8m-mqR"/>
-                                    <constraint firstItem="NLg-ck-C3b" firstAttribute="leading" secondItem="tua-xC-HBx" secondAttribute="leading" id="eyc-E9-Odi"/>
-                                    <constraint firstItem="VGP-A4-gP8" firstAttribute="height" secondItem="tua-xC-HBx" secondAttribute="height" multiplier="0.5" constant="0.5" id="mZH-51-DW0"/>
-                                    <constraint firstItem="J4K-ff-pxW" firstAttribute="leading" secondItem="tua-xC-HBx" secondAttribute="leading" id="qAC-8U-U25"/>
-                                    <constraint firstAttribute="trailing" secondItem="Tcs-kG-3SU" secondAttribute="trailing" id="qr1-zP-3Xy"/>
-                                    <constraint firstItem="EmN-fI-k8b" firstAttribute="leading" secondItem="tua-xC-HBx" secondAttribute="leading" id="rlh-KO-uZh"/>
+                                    <constraint firstAttribute="trailing" secondItem="1QG-mG-M2k" secondAttribute="trailing" constant="16" id="0ma-b2-knm"/>
+                                    <constraint firstItem="1QG-mG-M2k" firstAttribute="leading" secondItem="tua-xC-HBx" secondAttribute="leading" constant="16" id="dFX-tQ-Xyi"/>
+                                    <constraint firstItem="1QG-mG-M2k" firstAttribute="top" secondItem="tua-xC-HBx" secondAttribute="top" constant="253" id="xLT-PF-MBS"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -81,19 +46,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="restaurantAddress" destination="Tcs-kG-3SU" id="Lz8-tm-tF9"/>
                         <outlet property="restaurantCardView" destination="tua-xC-HBx" id="C1d-g9-cP1"/>
-                        <outlet property="restaurantGenre" destination="NLg-ck-C3b" id="kNC-u3-Nfe"/>
-                        <outlet property="restaurantImage" destination="VGP-A4-gP8" id="Qqg-BG-jqH"/>
-                        <outlet property="restaurantName" destination="EmN-fI-k8b" id="xOh-UO-yuc"/>
-                        <outlet property="restaurantOverView" destination="J4K-ff-pxW" id="FRT-Eo-KQX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <resources>
-        <image name="Image" width="660" height="370"/>
-    </resources>
 </document>
