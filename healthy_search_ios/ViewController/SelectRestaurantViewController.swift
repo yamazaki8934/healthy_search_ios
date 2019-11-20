@@ -12,11 +12,8 @@ import Koloda
 final class SelectRestaurantViewController: UIViewController {
     
     @IBOutlet private weak var restaurantCardView: KolodaView!
-    @IBOutlet private weak var restaurantImage: UIImageView!
-    @IBOutlet private weak var restaurantName: UILabel!
-    @IBOutlet private weak var restaurantGenre: UILabel!
-    @IBOutlet private weak var restaurantAddress: UILabel!
-    @IBOutlet private weak var restaurantOverView: UILabel!
+    let imageArray = ["miload", "margo"]
+    let nameArray = ["新宿ミロード", "サラダデリMARGO"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +37,7 @@ extension SelectRestaurantViewController: KolodaViewDelegate {
 
 extension SelectRestaurantViewController: KolodaViewDataSource {
     func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
-        return 1//images.count
+        return 2//images.count
     }
     
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
@@ -48,10 +45,38 @@ extension SelectRestaurantViewController: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIImageView(image: UIImage(named:"Image")!)//images[index])
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 32, height: UIScreen.main.bounds.height - 60)
+        view.backgroundColor = .white
+        
+        let restaurantImage = UIImageView()
+        restaurantImage.image = UIImage(named: imageArray[index])
+        restaurantImage.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 32, height: (UIScreen.main.bounds.height - 60) / 2)
+        restaurantImage.contentMode = .scaleAspectFill
+        restaurantImage.clipsToBounds = true
+        restaurantImage.layer.cornerRadius = 8.0
+        view.addSubview(restaurantImage)
+        
+        let restaurantName = UILabel()
+        restaurantName.text = nameArray[index]
+        restaurantName.frame = CGRect(x: 0, y: restaurantImage.bounds.maxY + 25, width: UIScreen.main.bounds.width - 32, height: 22)
+        restaurantName.textAlignment = .center
+        restaurantName.font = UIFont(name: "Avenir Next Condensed", size: 40)
+        view.addSubview(restaurantName)
+        
+        return view
     }
     
-//    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-//        return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)[0] as? OverlayView
-//    }
+    //dtagの方向など
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        if direction == .right {
+            // 地図を表示
+            print("LIKE")
+        }
+        
+        if direction == .left {
+            // 次のカードを表示
+            print("NOPE")
+        }
+    }
 }
