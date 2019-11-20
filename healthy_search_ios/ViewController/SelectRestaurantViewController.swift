@@ -74,7 +74,30 @@ extension SelectRestaurantViewController: KolodaViewDataSource {
             //MapViewを生成し、表示する
             let myMapView = MKMapView()
             myMapView.frame = self.view.frame
-            self.view.addSubview(myMapView)
+            restaurantCardView.addSubview(myMapView)
+            
+            // 以下新宿周辺を指定
+            //緯度の指定
+            let latitude:CLLocationDegrees = 35.691574
+
+            //経度の指定
+            let longtude:CLLocationDegrees = 139.704647
+
+            //地図の広さ：画面の端から端までの緯度の差 (これを大きくするとズームアウト)
+            let latDelta:CLLocationDegrees = 0.01
+            let lonDelta:CLLocationDegrees = 0.01
+
+            //地図の広さを指定して広さ(span)を割り出す
+            let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
+
+            //経度と緯度を指定して位置(location) を割り出す
+            let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longtude)
+
+            //region:位置と広さを指定して地図を表示する。
+            let region:MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
+            
+            //Mapに位置情報を指定して表示。
+            myMapView.setRegion(region, animated: true)
         }
         
         if direction == .left {
