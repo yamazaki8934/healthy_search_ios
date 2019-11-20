@@ -8,7 +8,7 @@
 
 import UIKit
 import Koloda
-
+import MapKit
 final class SelectRestaurantViewController: UIViewController {
     
     @IBOutlet private weak var restaurantCardView: KolodaView!
@@ -71,7 +71,10 @@ extension SelectRestaurantViewController: KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         if direction == .right {
             // 地図を表示
-            print("LIKE")
+            //MapViewを生成し、表示する
+            let myMapView = MKMapView()
+            myMapView.frame = self.view.frame
+            self.view.addSubview(myMapView)
         }
         
         if direction == .left {
