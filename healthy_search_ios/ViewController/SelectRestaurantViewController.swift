@@ -12,7 +12,7 @@ import MapKit
 final class SelectRestaurantViewController: UIViewController {
     
     @IBOutlet private weak var restaurantCardView: KolodaView!
-    let imageArray = ["farmer", "margo", "noni_cafe", "daidokoro"]
+    let imageArray = ["daidokoro", "margo", "noni_cafe", "farmer"]
     let nameArray = ["Mr.FARMER", "サラダデリMARGO", "タヒチアン ノニ カフェ", "農家の台所"]
     let descriptionArray = ["「畑の伝道師」渡邉明が選んだ自慢のお野菜をふんだんに使い、素材の力を最大限に活かしたサラダやオープンサンド。ヴィーガンやHighプロテインメニュイも。アメリカ西海岸にあるヘルスコンシャスなカフェを思わせる、体が喜ぶお野菜カフェです。4種のデットクスウォーターもフリー。", "マルゴは「自然まるごと、サラダサプリ」をコンセプトとしたサラダデリの専門店です。 自然の恵みである野菜を食の主役に位置付け、国産の旬の野菜を中心にした栄養満点のサラダをご提供します", "都会の喧騒の中に位置しながらも、一歩足を踏み入れるとゆったりとした時間の流れが感じられる空間。明るい日差しが差し込む開放的な店内で、カラダとココロに向き合える時間を過ごしてもらいたいと、タヒチアンノニカフェは考えます。カフェでは「カラダにやさしい」をテーマに、野菜中心のメニュー作りをしています。", "新宿の真ん中でこんなにも新鮮な野菜が食べられるの？！しかも食べ放題？！ありがとうございます。そうなんです。これでもかっ！って野菜摂取ができます。"]
     let tabelogArray = ["https://mr-farmer.jp/locations/", "https://margo.co.jp/", "https://tncafe.jp/", "https://tabelog.com/tokyo/A1304/A130401/13094046/"]
@@ -71,15 +71,23 @@ extension SelectRestaurantViewController: KolodaViewDataSource {
         restaunrantDescription.numberOfLines = 0
         view.addSubview(restaunrantDescription)
         
-        let leftDistance = (UIScreen.main.bounds.width - 32 * 2) / 3
+        let leftDistance = (UIScreen.main.bounds.width - 32 * 3) / 4
         
         let checkmarkButton = UIButton()
         let image = UIImage(named: "checkmark")
         checkmarkButton.setImage(image, for: .normal)
-        checkmarkButton.frame = CGRect(x: leftDistance * 2 + 32, y: restaunrantDescription.frame.maxY, width: 32, height: 32)
+        checkmarkButton.frame = CGRect(x: leftDistance * 3 + 32 * 2, y: restaunrantDescription.frame.maxY, width: 32, height: 32)
         checkmarkButton.clipsToBounds = true
         checkmarkButton.layer.cornerRadius = 16
         view.addSubview(checkmarkButton)
+        
+        let starButton = UIButton()
+        let starImage = UIImage(named: "star")
+        starButton.setImage(starImage, for: .normal)
+        starButton.frame = CGRect(x: leftDistance * 2 + 32, y: restaunrantDescription.frame.maxY, width: 32, height: 32)
+        starButton.clipsToBounds = true
+        starButton.layer.cornerRadius = 16
+        view.addSubview(starButton)
         
         let crossmarkButton = UIButton()
         let crossImage = UIImage(named: "none")
@@ -92,37 +100,51 @@ extension SelectRestaurantViewController: KolodaViewDataSource {
         return view
     }
     
+    func koloda(_ koloda: KolodaView, allowedDirectionsForIndex index: Int) -> [SwipeResultDirection] {
+        return [.up, .left, .right]
+    }
+    
     //dtagの方向など
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
-//        if direction == .right {
-//            // 「ストックしました」のアラートを出してあげる
-//            // ① UIAlertControllerクラスのインスタンスを生成
-//            // タイトル, メッセージ, Alertのスタイルを指定する
-//            // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
-//            let alert: UIAlertController = UIAlertController(title: "ストックに成功しました", message: "ストックしたレストランは後から確認できます", preferredStyle:  UIAlertController.Style.alert)
-//
-//            // ② Actionの設定
-//            // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
-//            // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
-//            // OKボタン
-//            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
-//                // ボタンが押された時の処理を書く（クロージャ実装）
-//                (action: UIAlertAction!) -> Void in
-//                print("OK")
-//            })
-//
-//            // ③ UIAlertControllerにActionを追加
-//            alert.addAction(defaultAction)
-//
-//            // ④ Alertを表示
-//            present(alert, animated: true, completion: nil)
-//        }
-        
         if direction == .right {
+            // 「ストックしました」のアラートを出してあげる
+            // ① UIAlertControllerクラスのインスタンスを生成
+            // タイトル, メッセージ, Alertのスタイルを指定する
+            // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
+            let alert: UIAlertController = UIAlertController(title: "ストックに成功しました", message: "ストックしたレストランは後から確認できます", preferredStyle:  UIAlertController.Style.alert)
+
+            // ② Actionの設定
+            // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
+            // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
+            // OKボタン
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+                print("OK")
+            })
+
+            // ③ UIAlertControllerにActionを追加
+            alert.addAction(defaultAction)
+
+            // ④ Alertを表示
+            present(alert, animated: true, completion: nil)
+        }
+        
+        if direction == .up {
+            // 地図表示前にアラート表示
+            let alert: UIAlertController = UIAlertController(title: "今すぐここに行く", message: "地図を表示しました", preferredStyle:  UIAlertController.Style.alert)
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+                print("OK")
+            })
+            alert.addAction(defaultAction)
+            present(alert, animated: true, completion: nil)
+            
             // スーパーライク時は地図を表示
             //MapViewを生成し、表示する
             let myMapView = MKMapView()
-            myMapView.frame = self.view.frame
+            myMapView.frame = CGRect(x: -16, y: -32, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             restaurantCardView.addSubview(myMapView)
             
             // 以下新宿周辺を指定
@@ -145,8 +167,12 @@ extension SelectRestaurantViewController: KolodaViewDataSource {
             //region:位置と広さを指定して地図を表示する。
             let region:MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
             
-            //Mapに位置情報を指定して表示。
             myMapView.setRegion(region, animated: true)
+            
+            // ピンの設置
+            let pin = MKPointAnnotation()
+            pin.coordinate = location
+            myMapView.addAnnotation(pin)
         }
         
         if direction == .left {
