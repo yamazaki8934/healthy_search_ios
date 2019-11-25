@@ -12,7 +12,7 @@ import MapKit
 final class SelectRestaurantViewController: UIViewController {
     
     @IBOutlet private weak var restaurantCardView: KolodaView!
-    let imageArray = ["farmer", "margo", "noni_cafe", "daidokoro"]
+    let imageArray = ["daidokoro", "margo", "noni_cafe", "farmer"]
     let nameArray = ["Mr.FARMER", "サラダデリMARGO", "タヒチアン ノニ カフェ", "農家の台所"]
     let descriptionArray = ["「畑の伝道師」渡邉明が選んだ自慢のお野菜をふんだんに使い、素材の力を最大限に活かしたサラダやオープンサンド。ヴィーガンやHighプロテインメニュイも。アメリカ西海岸にあるヘルスコンシャスなカフェを思わせる、体が喜ぶお野菜カフェです。4種のデットクスウォーターもフリー。", "マルゴは「自然まるごと、サラダサプリ」をコンセプトとしたサラダデリの専門店です。 自然の恵みである野菜を食の主役に位置付け、国産の旬の野菜を中心にした栄養満点のサラダをご提供します", "都会の喧騒の中に位置しながらも、一歩足を踏み入れるとゆったりとした時間の流れが感じられる空間。明るい日差しが差し込む開放的な店内で、カラダとココロに向き合える時間を過ごしてもらいたいと、タヒチアンノニカフェは考えます。カフェでは「カラダにやさしい」をテーマに、野菜中心のメニュー作りをしています。", "新宿の真ん中でこんなにも新鮮な野菜が食べられるの？！しかも食べ放題？！ありがとうございます。そうなんです。これでもかっ！って野菜摂取ができます。"]
     let tabelogArray = ["https://mr-farmer.jp/locations/", "https://margo.co.jp/", "https://tncafe.jp/", "https://tabelog.com/tokyo/A1304/A130401/13094046/"]
